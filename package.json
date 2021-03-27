@@ -41,8 +41,14 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": "eslint --fix --max-warnings=0",
-    "*.{md,html,css,json}": "prettier --write"
+    "*.{js,jsx}": [
+      "eslint --fix --max-warnings=0",
+      "git add"
+    ],
+    "*.{md,html,css,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "browserslist": {
     "production": [
